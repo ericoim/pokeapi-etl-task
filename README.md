@@ -122,7 +122,7 @@ pytest
 To see the code coverage statistics:
 
 ```bash
-pytest --cov=pokemon_app tests/
+pytest --cov=pokemon_app test/
 ```
 
 ## Run tests with HTML Report
@@ -130,5 +130,5 @@ pytest --cov=pokemon_app tests/
 For a detailed line-by-line breakdown:
 
 ```bash
-pytest --cov=pokemon_app --cov-report=html tests/
+pytest --cov=pokemon_app --cov-report=html test/
 ```
