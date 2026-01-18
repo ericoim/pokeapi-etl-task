@@ -105,3 +105,30 @@ This project emphasizes *Separation of Concerns* in its design:
 - **Adapter** `(service/pokeapi.py)` - A dedicated client for external API communication, handling timeouts and error logging.
 
 This structure allows for a lower level of coupling, making it possible for any hypothetical future changes to involve less impact in surrounding components - i.e.: a change in DB driver will be contained in the Repository layer, while maintaining code in the Service Layer untouched.
+
+## Running Tests
+
+The project includes a comprehensive test suite using `pytest`. It covers:
+- **Integration Tests:** Verifying the full pipeline (Controller -> Service -> DB).
+- **Unit Tests:** Isolating external API behavior and error handling.
+
+### Run all tests
+```bash
+pytest
+```
+
+## Run tests with Coverage Report
+
+To see the code coverage statistics:
+
+```bash
+pytest --cov=pokemon_app tests/
+```
+
+## Run tests with HTML Report
+
+For a detailed line-by-line breakdown:
+
+```bash
+pytest --cov=pokemon_app --cov-report=html tests/
+```
